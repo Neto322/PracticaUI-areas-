@@ -8,44 +8,28 @@
         Title="MainWindow" Height="450" Width="800">
 	<Grid>
 		<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="2*"></ColumnDefinition>
-			<ColumnDefinition Width="2*"></ColumnDefinition>
 			<ColumnDefinition Width="*"></ColumnDefinition>
 			<ColumnDefinition Width="*"></ColumnDefinition>
 		</Grid.ColumnDefinitions>
 		<Grid.RowDefinitions>
-			<RowDefinition></RowDefinition>
-			<RowDefinition></RowDefinition>
-			<RowDefinition></RowDefinition>
-			<RowDefinition></RowDefinition>
-			<RowDefinition></RowDefinition>
-			<RowDefinition></RowDefinition>
-			<RowDefinition></RowDefinition>
-			<RowDefinition></RowDefinition>
-			<RowDefinition></RowDefinition>
-			<RowDefinition></RowDefinition>
+			<RowDefinition Height="Auto"></RowDefinition>
+			<RowDefinition Height="Auto"></RowDefinition>
+			<RowDefinition Height="Auto"></RowDefinition>
+			<RowDefinition Height="Auto"></RowDefinition>
 		</Grid.RowDefinitions>
 		<TextBlock Grid.ColumnSpan="1" Foreground="#FF4A4C4D" FontFamily="Adobe Gothic Std B" FontSize="18">Áreas De Figuras Geométricas</TextBlock>
-		<TextBlock Grid.Column="0" Grid.Row="1" Foreground="#FF4A4C4D" FontFamily="Adobe Gothic Std B" FontSize="18" HorizontalAlignment="Center"> Rectángulo</TextBlock>
-		<TextBox Name="BaseRectangulo" Grid.Column="0" Grid.Row="2" Foreground="#FF4A4C4D" FontFamily="Adobe Gothic Std B" FontSize="18" HorizontalAlignment="Stretch" Cursor="Cross" IsHitTestVisible="True">Base</TextBox>
-		<TextBox Name="AlturaRectangulo" Grid.Column="1" Grid.Row="2" Foreground="#FF4A4C4D" FontFamily="Adobe Gothic Std B" FontSize="18" HorizontalAlignment="Stretch" Cursor="Cross" IsHitTestVisible="True">Altura</TextBox>
-		<TextBlock Grid.Column="0" Grid.Row="3" Foreground="#FF4A4C4D" FontFamily="Adobe Gothic Std B" FontSize="18" HorizontalAlignment="Center"> Triángulo</TextBlock>
-		<TextBox Name="BaseTriangulo"  Grid.Column="0" Grid.Row="4" Foreground="#FF4A4C4D" FontFamily="Adobe Gothic Std B" FontSize="18" HorizontalAlignment="Stretch" Cursor="Cross" IsHitTestVisible="True">Base</TextBox>
-		<TextBox Name="AlturaTriangulo" Grid.Column="1" Grid.Row="4" Foreground="#FF4A4C4D" FontFamily="Adobe Gothic Std B" FontSize="18" HorizontalAlignment="Stretch" Cursor="Cross" IsHitTestVisible="True">Altura</TextBox>
-		<TextBlock Grid.Column="0" Grid.Row="5" Foreground="#FF4A4C4D" FontFamily="Adobe Gothic Std B" FontSize="18" HorizontalAlignment="Center"> Círculo</TextBlock>
-		<TextBox Name="RadioCirculo" Grid.Column="0" Grid.Row="6" Foreground="#FF4A4C4D" FontFamily="Adobe Gothic Std B" FontSize="18" HorizontalAlignment="Stretch" Cursor="Cross" IsHitTestVisible="True">Radio</TextBox>
-		<TextBlock Grid.Column="0" Grid.Row="7" Foreground="#FF4A4C4D" FontFamily="Adobe Gothic Std B" FontSize="18" HorizontalAlignment="Center"> Trapecio</TextBlock>
-		<TextBox Name="BaseMayorTrapecio" Grid.Column="0" Grid.Row="8" Foreground="#FF4A4C4D" FontFamily="Adobe Gothic Std B" FontSize="18" HorizontalAlignment="Stretch" Cursor="Cross" IsHitTestVisible="True">Base mayor</TextBox>
-		<TextBox Name="BaseMenorTrapecio" Grid.Column="1" Grid.Row="8" Foreground="#FF4A4C4D" FontFamily="Adobe Gothic Std B" FontSize="18" HorizontalAlignment="Stretch" Cursor="Cross" IsHitTestVisible="True">Base menor</TextBox>
-		<TextBox Name="AlturaTrapecio" Grid.Column="0" Grid.Row="9" Foreground="#FF4A4C4D" FontFamily="Adobe Gothic Std B" FontSize="18" HorizontalAlignment="Stretch" Cursor="Cross" IsHitTestVisible="True">Altura</TextBox>
-		<Button Name="CalcularRectangulo" Grid.Column="2" Grid.Row="2" Foreground="#FF4A4C4D" FontFamily="Adobe Gothic Std B" FontSize="18" HorizontalAlignment="Stretch" Cursor="Cross" Click="CalcularRectangulo_Click">Calcular</Button>
-		<Button Click="CalcularTriangulo_Click" Name="CalcularTriangulo" Grid.Column="2" Grid.Row="4" Foreground="#FF4A4C4D" FontFamily="Adobe Gothic Std B" FontSize="18" HorizontalAlignment="Stretch" Cursor="Cross">Calcular</Button>
-		<Button Click="CalcularCirculo_Click" Name="CalcularCirculo" Grid.Column="2" Grid.Row="6" Foreground="#FF4A4C4D" FontFamily="Adobe Gothic Std B" FontSize="18" HorizontalAlignment="Stretch" Cursor="Cross">Calcular</Button>
-		<Button  Click="CalcularTrapecio_Click" Name="CalcularTrapecio"  Grid.Column="2" Grid.Row="8" Foreground="#FF4A4C4D" FontFamily="Adobe Gothic Std B" FontSize="18" HorizontalAlignment="Right" Cursor="Cross" Width="132">Calcular</Button>
-		<TextBlock Name="ResultadoRectangulo" Grid.Column="3" Grid.Row="2"  Foreground="#FF4A4C4D" FontFamily="Adobe Gothic Std B" FontSize="18" HorizontalAlignment="Center" Cursor="Cross" ></TextBlock>
-		<TextBlock Name="ResultadoTriangulo" Grid.Column="3" Grid.Row="4"  Foreground="#FF4A4C4D" FontFamily="Adobe Gothic Std B" FontSize="18" HorizontalAlignment="Center" Cursor="Cross" ></TextBlock>
-		<TextBlock Name="ResultadoCirculo" Grid.Column="3" Grid.Row="6"  Foreground="#FF4A4C4D" FontFamily="Adobe Gothic Std B" FontSize="18" HorizontalAlignment="Center" Cursor="Cross" ></TextBlock>
-		<TextBlock Name="ResultadoTrapecio" Grid.Column="3" Grid.Row="8"  Foreground="#FF4A4C4D" FontFamily="Adobe Gothic Std B" FontSize="18" HorizontalAlignment="Center" Cursor="Cross" ></TextBlock>
-		
+		<Button Click="Calcular_Click" Name="Calcular" Grid.Column="2" Grid.Row="0" Foreground="#FF4A4C4D" FontFamily="Adobe Gothic Std B" FontSize="18" HorizontalAlignment="Stretch" Cursor="Cross" >Calcular</Button>
+		<TextBlock Name="Resultado" Grid.Column="1" Grid.Row="3"  Foreground="#FF4A4C4D" FontFamily="Adobe Gothic Std B" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" Cursor="Cross" >
+		</TextBlock>
+		<ComboBox Name="cbTipoFigura" Grid.Column="0" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Stretch" SelectionChanged="cbTipoFigura_SelectionChanged" >
+
+			<ComboBoxItem>Rectangulo</ComboBoxItem>
+			<ComboBoxItem>Triangulo</ComboBoxItem>
+			<ComboBoxItem>Circulo</ComboBoxItem>
+			<ComboBoxItem>Trapecio</ComboBoxItem>
+		</ComboBox>
+		<StackPanel Name="panelConfigacion" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
+			
+		</StackPanel>
 	</Grid>
 </Window>
