@@ -104,26 +104,41 @@ namespace WpfApp1
             switch (cbTipoFigura.SelectedIndex)
             {
                 case 0: //Rectangulo
-               
+                    var controlAreaRectangulo = (ControlAreaRectangulo)(panelConfigacion.Children[0]);
+                    float baserectangulo = float.Parse(controlAreaRectangulo.BaseRectangulo.Text);
+                    float alturarectangulo = float.Parse(controlAreaRectangulo.AlturaRectangulo.Text);
+                    area = baserectangulo * alturarectangulo;
                     break;
 
                 case 1: //Triangulo
-                  
+                    var controlAreaTriangulo = (ControlAreaTriangulo)(panelConfigacion.Children[0]);
+                    float basetriangulo = float.Parse(controlAreaTriangulo.BaseTriangulo.Text);
+                    float alturatriangulo = float.Parse(controlAreaTriangulo.AlturaTriangulo.Text);
+
+                    area = (basetriangulo * alturatriangulo) / 2;
                     break;
 
                 case 2: //Circulo
-                   
+                    var controlAreaCirculo = (ControlAreaCirculo)(panelConfigacion.Children[0]);
+                    float radio = float.Parse(controlAreaCirculo.RadioCirculo.Text);
+                    area = 3.1416f * radio * radio;
                     break;
 
                 case 3:  //Trapecio
-                 
+                    var controlAreaTrapecio= (ControlAreaTrapecio)(panelConfigacion.Children[0]);
+                    float basemenor = float.Parse(controlAreaTrapecio.BaseMenorTrapecio.Text);
+                    float basemayor = float.Parse(controlAreaTrapecio.BaseMayorTrapecio.Text);
+                    float alutura = float.Parse(controlAreaTrapecio.AlturaTrapecio.Text);
+
+                    area = (basemenor * basemayor * alutura) / 2;
                     break;
-
                 default:
-
                     break;
             }
-            Resultado.Text = area.ToString();
+         
+                Resultado.Text = area.ToString() + "U²";
+            
+          
         }
     }
 }
